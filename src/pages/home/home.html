@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home Page
     </ion-title>
   </ion-navbar>
+  <ion-buttons end>
+    <button ion-button icon-only (click) = "goToProfile()">
+      <ion-icon name="person"></ion-icon> 
+    </button>
+  </ion-buttons>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Assalamualaikum Warahmatullahi Wabarakatuh
   </p>
+  <ion-item>
+    <ion-grid>
+      <ion-col col-4>Email</ion-col>
+      <ion-col col-8 *ngIf="userProfile?.email"></ion-col>
+      {{userProfile?.email}}
+    </ion-grid>
+  </ion-item>
 </ion-content>
